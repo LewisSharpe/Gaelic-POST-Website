@@ -1,0 +1,41 @@
+div.code, div.code > pre {
+    color: #cccccc !important;
+    background-color: #2d2d2d !important;
+}
+.comment {
+    /* font-lock-comment-face */
+    color: #999999;
+    font-style: italic;
+}
+.comment-delimiter {
+    /* font-lock-comment-delimiter-face */
+    color: #999999;
+    font-style: italic;
+}
+.constant {
+    /* font-lock-constant-face */
+    color: #6699cc;
+}
+.keyword {
+    /* font-lock-keyword-face */
+    color: #99cc99;
+}
+.string {
+    /* font-lock-string-face */
+    color: #66cccc;
+}
+.variable-name {
+    /* font-lock-variable-name-face */
+    color: #ffcc66;
+}
+
+div.code a {
+    color: inherit;
+    background-color: inherit;
+    font: inherit;
+    text-decoration: inherit;
+}
+div.code a:hover {
+    text-decoration: underline;
+}
+

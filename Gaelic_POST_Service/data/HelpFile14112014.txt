@@ -1,0 +1,26 @@
+﻿FILE TYPES
+This application requires, as input, .txt files encoded in UTF-8.  It is capable of outputting in either .txt files, with tags delimited by a forward slash (i.e. ‘/’), or in .csv files.  
+
+The .txt file output can be easily imported into a range of third party concordancers, such as WordSmith Tools, AntConc or NLTK (Natural Language Toolkit).  Files saved as .csv can be opened in Excel, and may be useful for a range of programming tasks.
+
+LIBRARY VERSION REQUIRED
+
+This application requires the following libraries with these specific versions :
+- Python 3.2
+- Setuptools 9.1 (required to install NLTK 3.0.a3)
+- NLTK 3.0.a3
+- Numpy  1.9.2
+
+TAGSET MODES
+The tagger provides output according to a simple or standard mode.  
+
+The simple mode uses 40 tags and provides part-of-speech (e.g. verb), along with a small number of grammatical features (e.g. tense).  This mode will suit many standard NLP and pedagogical purposes, and has the advantage of being more accurate, overall.  
+
+The standard mode, with 245 tags, uses a modified version of the Irish PAROLE tagset.  It is designed to be able to accurately categorise all of the morphology and orthography of modern Scottish Gaelic.  Although it is highly accurate for a tagger of this granularity, the data sparsity in the certain aspects of the training data means that it struggles with certain categories (e.g. gender).   
+
+See the ‘Scottish Gaelic Part-of-Speech Annotation Guidelines’ for further information on the tagsets.  
+
+TAGGER FUNCTIONING
+This application is based upon the Brill tagger, and was trained upon a hand-tagged, 118k token corpus.  
+
+Like a statistical tagger, the Brill tagger first pairs tokens with their most likely tags, as observed in the training corpus.  It then induces corrective rules by noting where tags have been incorrectly applied, and re-tags the corpus using these learnt patterns.  Our default tagger goes one step further, using contextual information to further disambiguate certain common tagging errors (e.g. confusions between dative and nominative case).  
